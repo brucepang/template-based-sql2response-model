@@ -1,0 +1,257 @@
+[
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ) , column1 FROM table0 GROUP BY column2",
+         "Response Pattern": "The result table shows the aggregate0 column0 of all the table0 in each column1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , aggregate0 ( column1 ) FROM table0 GROUP BY column2",
+        "Response Pattern": "Here are the column0 and aggregate0 column1 of each column2 in all table0 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , aggregate0 ( column1 ) FROM table0 GROUP BY column2 ORDER BY aggregate1 column3 DESC",
+        "Response Pattern": "Here are the column0 and aggregate0 column1 of each column2 in all table0 ordered by aggregate1 column3 descendingly."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , aggregate0 ( column1 ) FROM table0 GROUP BY column2 ORDER BY column3 ASC",
+        "Response Pattern": "Here are the column0 and aggregate0 column1 of each column2 in all table0 ordered by column3 ascendingly."
+    },
+
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ) FROM table0 WHERE column1 comparison0 value0",
+         "Response Pattern": "The aggregate0 column0 of all the table0 with the column1 comparison0 value0 is result0 ."
+    },
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ) FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1 = T2.column2 WHERE column3 comparison0 value0",
+         "Response Pattern": "The aggregate0 column0 of all the table0 with the column3 comparison0 value0 is result0 ."
+    },
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ) FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1 = T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE column5 comparison0 value0",
+         "Response Pattern": "The aggregate0 column0 of all the table0 with the column5 comparison0 value0 is result0 ."
+    },
+
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ) FROM table0",
+         "Response Pattern": "The aggregate0 column0 of all the table0 is result0 ."
+    },
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ) , aggregate1 ( column1 ) FROM table0",
+         "Response Pattern": "The aggregate0 column0 and aggregate1 column1 of all the table0 are result0 and result1 ."
+    },
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( T1.column0 ) , aggregate1 ( T1.column1 ) FROM table0 AS T1 JOIN table1 AS T2 ON T1.column2 = T2.column3 WHERE T2.column4 comparison0 value0",
+         "Response Pattern": "The aggregate0 column0 and aggregate1 column1 of all the table0 with column4 comparison0 value0 are result0 and result1 .",
+         "Response Pattern Plural": "Here are the aggregate0 column0 and aggregate1 column1 of all the table0 with column4 comparison0 value0 ."
+    },
+
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( column0 ), aggregate1 ( column1 ), aggregate2 ( column2 ) FROM table0",
+         "Response Pattern": "Here are the aggregate0 column0, aggregate1 column1, and aggregate2 column2 of all the table0 ."
+    },
+
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( DISTINCT column0 ) FROM table0",
+         "Response Pattern": "The aggregate0 distinct column0 of all the table0 is result0 ."
+    },
+
+    {
+         "SQL Pattern": "SELECT aggregate0 ( DISTINCT column0 ) FROM table0 WHERE column1 comparison0 value0",
+         "Response Pattern": "The aggregate0 distinct column0 of all the table0 with column1 comparison0 value0 is result0 ."
+    },
+
+
+    {
+         "SQL Pattern": "SELECT DISTINCT column0 FROM table0",
+         "Response Pattern": "Here are the distinct column0 of all table0 ."
+    },
+
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 GROUP BY column1 ORDER BY aggregate0 ( column2 ) DESC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of the table0 that has the highest aggregate0 column2 in terms of different column1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 GROUP BY column1 ORDER BY aggregate0 ( column2 ) ASC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of the table0 that has the lowest aggregate0 column2 in terms of different column1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 comparison0 value0 ",
+        "Response Pattern": "result0 is the column0 of the table0 with the column1 comparison0 value0 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT * FROM table0 AS T1 JOIN table1 AS T2 ON T1.column0   =   T2.column1 JOIN table2 AS T3 ON T3.column2   =   T1.column3 WHERE T1.column4  comparison0  value0",
+        "Response Pattern": "Here is all information about the table0 and table1 and table2 associated with the column4 comparison0 value0"
+
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 WHERE T2.column3 comparison0 value0",
+        "Response Pattern": "Here are the column0 of table0 that have an associated column3 comparison0 value0"
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 ORDER BY column3 DESC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of table0 that have the highest associated column3"
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 ORDER BY column3 ASC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of table0 that have the lowest associated column3"
+    },
+
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 as T1 JOIN table1 as T2 on T1.column1  =  T2.column2 GROUP BY T2.column3 ORDER BY aggregate0 ( column4 )  DESC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of table0 that have the highest associated aggregate0 column4 in terms of each column3 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 as T1 JOIN table1 as T2 on T1.column1  =  T2.column2 GROUP BY T2.column3 ORDER BY aggregate0 ( column4 )  ASC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of table0 that have the lowest associated aggregate0 column4 in terms of each column3 ."
+    },
+
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column5 comparison0 value0",
+        "Response Pattern": "Here are the column0 of table0 that have an associated column5 comparison0 value0"
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column5 comparison0 value0 INTERSECT SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column6 comparison1 value1",
+        "Response Pattern": "Here are the column0 of table0 that have both an associated column5 comparison0 value0 and an associated column6 comparison1 value1"
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column5 comparison0 value0 UNION SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column6 comparison1 value1",
+        "Response Pattern": "Here are the column0 of table0 that have an associated column5 comparison0 value0 and the column0 of table0 that have an associated column6 comparison1 value1"
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column5 comparison0 value0 EXCEPT SELECT T1.column0 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column1   =   T2.column2 JOIN table2 AS T3 ON T2.column3 = T3.column4 WHERE T2.column6 comparison1 value1",
+        "Response Pattern": "Here are the column0 of table0 that have an associated column5 comparison0 value0 excluding those with an associated column6 comparison1 value1"
+    },
+
+
+    {
+        "SQL Pattern": "SELECT T1.column0, T1.column1 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column2   =   T2.column3 WHERE T2.column4 comparison0 value0",
+        "Response Pattern": "Here are the column0 and column1 of table0 that have an associated column4 comparison0 value0"
+    },
+
+
+    {
+        "SQL Pattern": "SELECT T1.column0, T1.column1 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column2   =   T2.column3 JOIN table2 AS T3 ON T2.column4 = T3.column5 WHERE T2.column6 comparison0 value0",
+        "Response Pattern": "Here are the column0 and column1 of table0 that have an associated column6 comparison0 value0"
+    },
+
+    {
+        "SQL Pattern": "SELECT T1.column0, T1.column1 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column2   =   T2.column3 JOIN table2 AS T3 ON T2.column4 = T3.column5 WHERE T2.column6 comparison0 value0 INTERSECT SELECT T1.column0 , T1.column1 FROM table0 AS T1 JOIN table1 AS T2 ON T1.column2   =   T2.column3 JOIN table2 AS T3 ON T2.column4 = T3.column5 WHERE T2.column7 comparison1 value1",
+        "Response Pattern": "Here are the column0 and column1 of table0 that have both an associated column6 comparison0 value0 and an associated column7 comparison1 value1"
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0",
+        "Response Pattern": "Here are the column0 of all table0 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , column1 FROM table0",
+        "Response Pattern": "Here are the column0 and column1 of all table0 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 comparison0 value0 logic0 column1 comparison1 value1",
+        "Response Pattern": "result0 is the column0 of the table0 with column1 comparison0 value0 logic0 column1 comparison1 value1 .",
+        "Response Pattern Plural": "Here are the column0 of the table0 with column1 comparison0 value0 logic0 column1 comparison1 value1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , column1 FROM table0 WHERE column2 comparison0 value0",
+        "Response Pattern": "column0 and column1 of the table0 with column2 comparison0 value0 are column0 and column1 .",
+        "Response Pattern Plural": "Here are the column0 and column1 of the table0 with column2 comparison0 value0 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , column1 FROM table0 WHERE column2 comparison0 value0 ORDER BY column2 ASC",
+        "Response Pattern": "column0 and column1 of the table0 with column2 comparison0 value0 are column0 and column1 .",
+        "Response Pattern Plural": "Here are the column0 and column1 of the table0 with column2 comparison0 value0 in ascending order of column2 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 , column1 FROM table0 WHERE column2 comparison0 value0 ORDER BY column2 DESC",
+        "Response Pattern": "column0 and column1 of the table0 with column2 comparison0 value0 are column0 and column1 .",
+        "Response Pattern Plural": "Here are the column0 and column1 of the table0 with column2 comparison0 value0 in descending order by column2 ."
+    },
+
+
+    {
+        "SQL Pattern": "SELECT column0 , column1 from table0 ORDER BY column2 DESC LIMIT 1",
+        "Response Pattern": "column0 and column1 of the table0 with the largest column2 are column0 and column1 .",
+        "Response Pattern Plural": "Here are the column0 and column1 of the table0 with the largest column2 ."
+    },
+
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 ORDER BY column1 DESC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of the table0 with the largest column1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 ORDER BY column1 ASC LIMIT 1",
+        "Response Pattern": "result0 is the column0 of the table0 with the smallest column1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 GROUP BY column1 HAVING aggregate0 ( column2 ) comparison0 value0",
+        "Response Pattern": "Here are the column0 of table0 that have the aggregate0 column2 comparison0 value0 in terms of column1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT aggregate0 ( column0 ) FROM table0 WHERE column1 NOT IN ( SELECT column2 FROM table1 )",
+        "Response Pattern": "result0 is the aggregate0 column0 of all table0 that do not have a column1 as a column2 of any table1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT aggregate0 ( column0 ) FROM table0 WHERE column1 IN ( SELECT column2 FROM table1 )",
+        "Response Pattern": "result0 is the aggregate0 column0 of all table0 that have a column1 as a column2 of any table1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 NOT IN ( SELECT column2 FROM table1 )",
+        "Response Pattern": "Here are the column0 of all table0 that do not have a column1 as a column2 of any table1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 IN ( SELECT column2 FROM table1 )",
+        "Response Pattern": "Here are the column0 of all table0 that have a column1 as a column2 of any table1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 comparison0 value0 EXCEPT SELECT column2 FROM table1 WHERE column3 comparison1 value1",
+        "Response Pattern": "Here are the column0 of table0 with a column1 comparison0 value0 excluding the column2 of table1 with a column3 comparison1 value1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 comparison0 value0 UNION SELECT column2 FROM table1 WHERE column3 comparison1 value1",
+        "Response Pattern": "Here are the column0 of table0 with a column1 comparison0 value0 and the column2 of table1 with a column3 comparison1 value1 ."
+    },
+
+    {
+        "SQL Pattern": "SELECT column0 FROM table0 WHERE column1 comparison0 value0 INTERSECT SELECT column2 FROM table1 WHERE column3 comparison1 value1",
+        "Response Pattern": "Here are the column0 of table0 with both a column1 comparison0 value0 and a column3 comparison1 value1 ."
+    }
+
+]

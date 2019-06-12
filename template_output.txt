@@ -1,0 +1,10 @@
+The average salary of all the instructors is 77600.18819999999.	The average salary of all the instructor is 77600.18819999999 .
+The result table shows the average salary of all the instructors in each department	The result table shows the average salary of all the instructor in each department name .
+Physics is the name of the department that has the highest average salary of instructors.	Physics is the department name of the instructor that has the highest average salary in terms of different department name .
+Accounting is the name of the department that has the lowest average salary of instructors.	Accounting is the department name of the instructor that has the highest average salary in terms of different department name .
+The name of the department where the instructor with the name 'Mird' works for is Marketing.	Marketing is the department name of the instructor with the name equal to 'Mird' .
+The salary of the instructor with the name 'Mird' is 119921.41.	119921.41 is the salary of the instructor with the name equal to 'Mird' .
+The station id for London Waterloo is 1.	1 is the station id of the station with the name equal to "London Waterloo" .
+The trains that go to station id 1 are shown in the result table.	Here is all information about the train station and station and train associated with the station id equal to 1
+The names and the times of the trains that go to station id 1 are shown in the result table.	Here are the name and time of train station that have an associated station id equal to 1
+No, none of these trains go to London Bridge.	Here are the name and time of train station that have both an associated station id equal to 1 and an associated name equal to 3
